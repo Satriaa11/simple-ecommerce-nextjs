@@ -24,14 +24,16 @@ const initialCartItems = [
     name: "Product 1",
     price: 99.99,
     quantity: 1,
-    image: "https://placehold.co/100x100",
+    image:
+      "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     id: 2,
     name: "Product 2",
     price: 149.99,
     quantity: 2,
-    image: "https://placehold.co/100x100",
+    image:
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?q=80&w=1905&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
 
@@ -42,8 +44,8 @@ export default function CartPage() {
     if (newQuantity < 1) return;
     setCartItems(
       cartItems.map((item) =>
-        item.id === id ? { ...item, quantity: newQuantity } : item
-      )
+        item.id === id ? { ...item, quantity: newQuantity } : item,
+      ),
     );
   };
 
@@ -53,7 +55,7 @@ export default function CartPage() {
 
   const subtotal = cartItems.reduce(
     (sum, item) => sum + item.price * item.quantity,
-    0
+    0,
   );
   const shipping = 10.0;
   const total = subtotal + shipping;
@@ -66,7 +68,7 @@ export default function CartPage() {
         <div className="text-center py-12">
           <h2 className="text-2xl font-semibold mb-4">Your cart is empty</h2>
           <p className="text-muted-foreground mb-8">
-            Looks like you haven't added anything to your cart yet.
+            Looks like you haven&#39;t added anything to your cart yet.
           </p>
           <Button asChild>
             <Link href="/products">Continue Shopping</Link>

@@ -1,4 +1,4 @@
-# 🛒 Simple E-commerce NextJS
+<!-- # 🛒 Simple E-commerce NextJS
 
 A modern and responsive e-commerce web application built with Next.js. This project includes core features such as product browsing, shopping cart, user authentication, and a checkout process.
 
@@ -238,8 +238,9 @@ Here's how to build the project from scratch:
    - Error handling
 
 11. **Deploy to Vercel** 🎉
+   -
 
 ---
 
 Feel free to customize and extend the project to fit your needs!
-
+ -->
